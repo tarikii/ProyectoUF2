@@ -12,6 +12,8 @@ public class Post {
     public String mediaType;
     public Map<String, Boolean> likes = new HashMap<>();
 
+    public String commentContent;
+
     public Map<String, Boolean> retweets = new HashMap<>();
 
     // Constructor vacio requerido por Firestore
@@ -27,7 +29,14 @@ public class Post {
 
     }
 
+    public Post(String uid, String author, String authorPhotoUrl,String commentContent) {
+        this.uid = uid;
+        this.author = author;
+        this.authorPhotoUrl = authorPhotoUrl;
+        this.content = content;
+        this.mediaUrl = mediaUrl;
+        this.mediaType = mediaType;
+        this.commentContent = commentContent;
 
-
-
+    }
 }
